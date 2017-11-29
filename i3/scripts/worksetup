@@ -1,0 +1,5 @@
+terminator
+xdotool key Alt+h
+terminator
+xdotool key Alt+v
+terminator

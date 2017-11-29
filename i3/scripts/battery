@@ -1,0 +1,7 @@
+#!/bin/bash
+BATTINFO=`acpi -b | grep Discharging`
+BATTCHECK=`echo $BATTINFO | cut -f 5 -d " "`
+
+if [[ $BATTCHECK < 00:30:00 && $BATTINFO ]] ; then
+	i3-nagbar -m "Battery will last another $BATTCHECK minutes" -b "Sleep" "/home/pai/.config/i3/scripts/sleep_lock"
+fi
