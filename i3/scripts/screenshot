@@ -1,2 +1,2 @@
 #!/bin/bash
-scrot '%Y-%m-%d_$wx$h.png' -e 'mv $f /home/pai/Pictures/Screenshots/'
+scrot '%Y-%m-%dT%H%M%S_$wx$h.png' -e 'mv $f /home/pai/Pictures/Screenshots/'
