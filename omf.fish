@@ -31,6 +31,7 @@ alias gsts "git stash show -p"
 alias gl "git log --topo-order --graph --pretty=format:'%C(green)%h%C(reset) %s%C(red)%d%C(reset)'"
 alias glg "git log --topo-order --graph --pretty=format:'%C(green)%h%C(reset) %s%n%C(blue)(%ar by %an)%C(red)%d%C(reset)%n'"
 alias glog "git log --topo-order --graph --pretty=format:'%C(bold)Commit:%C(reset) %C(green)%H%C(red)%d%n%C(bold)Author:%C(reset) %C(cyan)%an <%ae>%n%C(bold)Date:%C(reset) %C(blue)%ai (%ar)%C(reset)%n%+B'"
+alias gitcache "git config --global credential.helper cache"
 alias sl "ls"
 alias l "ls"
 alias s "ls"
@@ -42,10 +43,14 @@ alias androidstudio "/home/pai/android-studio/bin/studio.sh"
 alias hpconnect "nmcli device wifi connect HP"
 alias gcc-4.4 "gcc34"
 alias g++-4.4 "g++34"
-
+alias do "ssh root@139.59.23.206"
 set -gx GOPATH $HOME/go
 set -gx PYPATH /home/pai/.local/bin
+set -gx FLUTTER $HOME/flutter/bin
+set -gx ANDROID_HOME $HOME/Android/Sdk
 
-set -gx PATH /usr/local/go/bin $GOPATH/bin $PATH $PYPATH
+set -gx PATH /usr/local/go/bin $GOPATH/bin $PATH $PYPATH $FLUTTER $ANDROID_HOME
 
 set -gx DALAL_ENV "dev"
+set -gx SECRET_KEY "secret"
+set -gx DJANGO_SECRET_KEY "secret"
